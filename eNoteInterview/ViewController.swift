@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var executeActivityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var executeButton: UIButton!
+    @IBOutlet weak var resultTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func executeButtonWasPressed(_ sender: Any) {
+        
+    }
 
 }
 
