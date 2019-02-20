@@ -86,8 +86,26 @@
                                 </constraints>
                                 <variation key="widthClass=compact" axis="vertical"/>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-7U-h81">
+                                <rect key="frame" x="30" y="169" width="774" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gpB-CR-aEy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-Oo-Zld">
+                                <rect key="frame" x="30" y="224" width="774" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="H6w-lE-QoM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-Vp-dxQ">
-                                <rect key="frame" x="30" y="169" width="774" height="975"/>
+                                <rect key="frame" x="30" y="265" width="774" height="879"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="aWT-Vi-E09" userLabel="Footer">
                                     <rect key="frame" x="0.0" y="72" width="774" height="1"/>
@@ -103,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRV-7K-z5V" userLabel="Seperator Label">
-                                                    <rect key="frame" x="383" y="11.5" width="8" height="21"/>
+                                                    <rect key="frame" x="563" y="11.5" width="8" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="FmM-6g-2bu"/>
                                                     </constraints>
@@ -112,13 +130,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-0B-fdQ" userLabel="Value Label">
-                                                    <rect key="frame" x="15" y="11.5" width="348" height="20.5"/>
+                                                    <rect key="frame" x="15" y="11.5" width="528" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-g0-h7N" userLabel="Amount Label">
-                                                    <rect key="frame" x="411" y="11.5" width="363" height="21"/>
+                                                    <rect key="frame" x="591" y="11.5" width="543" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -151,12 +169,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mPa-nr-FRP" secondAttribute="trailing" constant="30" id="12Y-jN-mb0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gLZ-Vp-dxQ" secondAttribute="bottom" constant="30" id="6hL-BJ-XSd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gLZ-Vp-dxQ" secondAttribute="trailing" constant="30" id="8cx-LI-XkR"/>
+                            <constraint firstItem="dcm-7U-h81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RRh-ss-m8F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9r1-Oo-Zld" secondAttribute="trailing" constant="30" id="UEr-Nj-jTY"/>
+                            <constraint firstItem="9r1-Oo-Zld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Y7g-al-Fw3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcm-7U-h81" secondAttribute="trailing" constant="30" id="dJT-5F-rcM"/>
                             <constraint firstItem="mPa-nr-FRP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="kk6-Az-vOp">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
-                            <constraint firstItem="gLZ-Vp-dxQ" firstAttribute="top" secondItem="mPa-nr-FRP" secondAttribute="bottom" constant="20" id="nHP-um-ZHC"/>
                             <constraint firstItem="mPa-nr-FRP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ovd-wT-YMC"/>
                             <constraint firstItem="gLZ-Vp-dxQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="sul-is-YlV"/>
+                            <constraint firstItem="gLZ-Vp-dxQ" firstAttribute="top" secondItem="9r1-Oo-Zld" secondAttribute="bottom" constant="20" id="uZ8-hI-iu3"/>
+                            <constraint firstItem="dcm-7U-h81" firstAttribute="top" secondItem="mPa-nr-FRP" secondAttribute="bottom" constant="20" id="vKy-t6-heQ"/>
+                            <constraint firstItem="9r1-Oo-Zld" firstAttribute="top" secondItem="dcm-7U-h81" secondAttribute="bottom" constant="20" id="zjY-Na-S3j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -164,12 +188,13 @@
                         <outlet property="amountTextField" destination="aNC-AI-3di" id="bCC-ew-i7j"/>
                         <outlet property="executeActivityIndicatorView" destination="YGN-ps-4We" id="TE8-Ux-jSI"/>
                         <outlet property="executeButton" destination="nfo-dC-3o4" id="FFH-Aq-IH6"/>
+                        <outlet property="randomNumberArrayTextView" destination="dcm-7U-h81" id="7vL-na-hUr"/>
                         <outlet property="resultTableView" destination="gLZ-Vp-dxQ" id="FGR-qd-NT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.49640287769785" y="132.66331658291458"/>
+            <point key="canvasLocation" x="129.4921875" y="132.65007320644216"/>
         </scene>
     </scenes>
 </document>
