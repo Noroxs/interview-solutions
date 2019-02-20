@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
+		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
+		BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9CE221DC65000EB30DE /* Main.storyboard */; };
+		BB85A9D2221DC65100EB30DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9D1221DC65100EB30DE /* Assets.xcassets */; };
+		BB85A9D5221DC65100EB30DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */; };
+		BB85A9E0221DC65100EB30DE /* eNoteInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9DF221DC65100EB30DE /* eNoteInterviewTests.swift */; };
+		BB85A9EB221DC65100EB30DE /* eNoteInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB85A9DC221DC65100EB30DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB85A9BF221DC65000EB30DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB85A9C6221DC65000EB30DE;
+			remoteInfo = eNoteInterview;
+		};
+		BB85A9E7221DC65100EB30DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB85A9BF221DC65000EB30DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB85A9C6221DC65000EB30DE;
+			remoteInfo = eNoteInterview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB85A9CC221DC65000EB30DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB85A9CF221DC65000EB30DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB85A9D1221DC65100EB30DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB85A9D4221DC65100EB30DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB85A9D6221DC65100EB30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB85A9DB221DC65100EB30DE /* eNoteInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eNoteInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB85A9DF221DC65100EB30DE /* eNoteInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eNoteInterviewTests.swift; sourceTree = "<group>"; };
+		BB85A9E1221DC65100EB30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB85A9E6221DC65100EB30DE /* eNoteInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eNoteInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eNoteInterviewUITests.swift; sourceTree = "<group>"; };
+		BB85A9EC221DC65100EB30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB85A9C4221DC65000EB30DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9D8221DC65100EB30DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9E3221DC65100EB30DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB85A9BE221DC65000EB30DE = {
+			isa = PBXGroup;
+			children = (
+				BB85A9C9221DC65000EB30DE /* eNoteInterview */,
+				BB85A9DE221DC65100EB30DE /* eNoteInterviewTests */,
+				BB85A9E9221DC65100EB30DE /* eNoteInterviewUITests */,
+				BB85A9C8221DC65000EB30DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB85A9C8221DC65000EB30DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9C7221DC65000EB30DE /* eNoteInterview.app */,
+				BB85A9DB221DC65100EB30DE /* eNoteInterviewTests.xctest */,
+				BB85A9E6221DC65100EB30DE /* eNoteInterviewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB85A9C9221DC65000EB30DE /* eNoteInterview */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9CA221DC65000EB30DE /* AppDelegate.swift */,
+				BB85A9CC221DC65000EB30DE /* ViewController.swift */,
+				BB85A9CE221DC65000EB30DE /* Main.storyboard */,
+				BB85A9D1221DC65100EB30DE /* Assets.xcassets */,
+				BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */,
+				BB85A9D6221DC65100EB30DE /* Info.plist */,
+			);
+			path = eNoteInterview;
+			sourceTree = "<group>";
+		};
+		BB85A9DE221DC65100EB30DE /* eNoteInterviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9DF221DC65100EB30DE /* eNoteInterviewTests.swift */,
+				BB85A9E1221DC65100EB30DE /* Info.plist */,
+			);
+			path = eNoteInterviewTests;
+			sourceTree = "<group>";
+		};
+		BB85A9E9221DC65100EB30DE /* eNoteInterviewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */,
+				BB85A9EC221DC65100EB30DE /* Info.plist */,
+			);
+			path = eNoteInterviewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB85A9C6221DC65000EB30DE /* eNoteInterview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB85A9EF221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterview" */;
+			buildPhases = (
+				BB85A9C3221DC65000EB30DE /* Sources */,
+				BB85A9C4221DC65000EB30DE /* Frameworks */,
+				BB85A9C5221DC65000EB30DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eNoteInterview;
+			productName = eNoteInterview;
+			productReference = BB85A9C7221DC65000EB30DE /* eNoteInterview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB85A9DA221DC65100EB30DE /* eNoteInterviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB85A9F2221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterviewTests" */;
+			buildPhases = (
+				BB85A9D7221DC65100EB30DE /* Sources */,
+				BB85A9D8221DC65100EB30DE /* Frameworks */,
+				BB85A9D9221DC65100EB30DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB85A9DD221DC65100EB30DE /* PBXTargetDependency */,
+			);
+			name = eNoteInterviewTests;
+			productName = eNoteInterviewTests;
+			productReference = BB85A9DB221DC65100EB30DE /* eNoteInterviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB85A9E5221DC65100EB30DE /* eNoteInterviewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB85A9F5221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterviewUITests" */;
+			buildPhases = (
+				BB85A9E2221DC65100EB30DE /* Sources */,
+				BB85A9E3221DC65100EB30DE /* Frameworks */,
+				BB85A9E4221DC65100EB30DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB85A9E8221DC65100EB30DE /* PBXTargetDependency */,
+			);
+			name = eNoteInterviewUITests;
+			productName = eNoteInterviewUITests;
+			productReference = BB85A9E6221DC65100EB30DE /* eNoteInterviewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB85A9BF221DC65000EB30DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Thomas Ramson";
+				TargetAttributes = {
+					BB85A9C6221DC65000EB30DE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BB85A9DA221DC65100EB30DE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BB85A9C6221DC65000EB30DE;
+					};
+					BB85A9E5221DC65100EB30DE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BB85A9C6221DC65000EB30DE;
+					};
+				};
+			};
+			buildConfigurationList = BB85A9C2221DC65000EB30DE /* Build configuration list for PBXProject "eNoteInterview" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB85A9BE221DC65000EB30DE;
+			productRefGroup = BB85A9C8221DC65000EB30DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB85A9C6221DC65000EB30DE /* eNoteInterview */,
+				BB85A9DA221DC65100EB30DE /* eNoteInterviewTests */,
+				BB85A9E5221DC65100EB30DE /* eNoteInterviewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB85A9C5221DC65000EB30DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB85A9D5221DC65100EB30DE /* LaunchScreen.storyboard in Resources */,
+				BB85A9D2221DC65100EB30DE /* Assets.xcassets in Resources */,
+				BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9D9221DC65100EB30DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9E4221DC65100EB30DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB85A9C3221DC65000EB30DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
+				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9D7221DC65100EB30DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB85A9E0221DC65100EB30DE /* eNoteInterviewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB85A9E2221DC65100EB30DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB85A9EB221DC65100EB30DE /* eNoteInterviewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB85A9DD221DC65100EB30DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB85A9C6221DC65000EB30DE /* eNoteInterview */;
+			targetProxy = BB85A9DC221DC65100EB30DE /* PBXContainerItemProxy */;
+		};
+		BB85A9E8221DC65100EB30DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB85A9C6221DC65000EB30DE /* eNoteInterview */;
+			targetProxy = BB85A9E7221DC65100EB30DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB85A9CE221DC65000EB30DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB85A9CF221DC65000EB30DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB85A9D4221DC65100EB30DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB85A9ED221DC65100EB30DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB85A9EE221DC65100EB30DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB85A9F0221DC65100EB30DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB85A9F1221DC65100EB30DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB85A9F3221DC65100EB30DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eNoteInterview.app/eNoteInterview";
+			};
+			name = Debug;
+		};
+		BB85A9F4221DC65100EB30DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eNoteInterview.app/eNoteInterview";
+			};
+			name = Release;
+		};
+		BB85A9F6221DC65100EB30DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eNoteInterview;
+			};
+			name = Debug;
+		};
+		BB85A9F7221DC65100EB30DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QH88XR7RNN;
+				INFOPLIST_FILE = eNoteInterviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enote.eNoteInterviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eNoteInterview;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB85A9C2221DC65000EB30DE /* Build configuration list for PBXProject "eNoteInterview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB85A9ED221DC65100EB30DE /* Debug */,
+				BB85A9EE221DC65100EB30DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB85A9EF221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB85A9F0221DC65100EB30DE /* Debug */,
+				BB85A9F1221DC65100EB30DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB85A9F2221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB85A9F3221DC65100EB30DE /* Debug */,
+				BB85A9F4221DC65100EB30DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB85A9F5221DC65100EB30DE /* Build configuration list for PBXNativeTarget "eNoteInterviewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB85A9F6221DC65100EB30DE /* Debug */,
+				BB85A9F7221DC65100EB30DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB85A9BF221DC65000EB30DE /* Project object */;
+}
