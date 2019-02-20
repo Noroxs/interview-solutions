@@ -21,6 +21,22 @@ class ViewController: UIViewController {
 
     @IBAction func executeButtonWasPressed(_ sender: Any) {
         
+
+// MARK: - UITableViewDataSource extension
+
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return  0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    }
+    
+}
     }
 
 }
