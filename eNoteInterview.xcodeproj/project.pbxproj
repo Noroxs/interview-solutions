@@ -78,6 +78,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB58883E221E0CEE009F29CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9CC221DC65000EB30DE /* ViewController.swift */,
+				BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB58883F221E0D0D009F29CF /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				BB588840221E0D1C009F29CF /* Bindings */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		BB588840221E0D1C009F29CF /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		BB588842221E0D4E009F29CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB85A9CE221DC65000EB30DE /* Main.storyboard */,
+				BB85A9D1221DC65100EB30DE /* Assets.xcassets */,
+				BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */,
+				BB85A9D6221DC65100EB30DE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BB85A9BE221DC65000EB30DE = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				BB85A9CA221DC65000EB30DE /* AppDelegate.swift */,
-				BB85A9CC221DC65000EB30DE /* ViewController.swift */,
-				BB85A9CE221DC65000EB30DE /* Main.storyboard */,
-				BB85A9D1221DC65100EB30DE /* Assets.xcassets */,
-				BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */,
-				BB85A9D6221DC65100EB30DE /* Info.plist */,
-				BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */,
-				BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */,
+				BB58883E221E0CEE009F29CF /* Views */,
+				BB58883F221E0D0D009F29CF /* Miscellaneous */,
+				BB588842221E0D4E009F29CF /* Supporting Files */,
 			);
 			path = eNoteInterview;
 			sourceTree = "<group>";
@@ -443,7 +475,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH88XR7RNN;
-				INFOPLIST_FILE = eNoteInterview/Info.plist;
+				INFOPLIST_FILE = "eNoteInterview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +495,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH88XR7RNN;
-				INFOPLIST_FILE = eNoteInterview/Info.plist;
+				INFOPLIST_FILE = "eNoteInterview/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
