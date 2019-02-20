@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
 		BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9CE221DC65000EB30DE /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValueTableViewCell.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB85A9CC221DC65000EB30DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				BB85A9D3221DC65100EB30DE /* LaunchScreen.storyboard */,
 				BB85A9D6221DC65100EB30DE /* Info.plist */,
 				BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */,
+				BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */,
 			);
 			path = eNoteInterview;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB85A9F9221DCA6100EB30DE /* DynamicBinding.swift in Sources */,
+				BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */,
 				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
 				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,
 			);
