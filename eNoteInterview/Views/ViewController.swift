@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         viewModel?.isExecuteButtonHidden.bindAndFire { [weak self] isHidden in
             self?.executeButton.isHidden = isHidden
         }
+        
+        viewModel?.isTextFieldEditable.bindAndFire  { [weak self] isEditable in
+            self?.amountTextField.isEnabled = isEditable
+        }
     }
     
 }

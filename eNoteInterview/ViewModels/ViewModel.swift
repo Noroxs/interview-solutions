@@ -13,6 +13,7 @@ struct ViewModel {
     let executeActivityIndicatorAnimating: DynamicBinding<Bool> = DynamicBinding(false)
     let isExecuteButtonEnabled: DynamicBinding<Bool> = DynamicBinding(false)
     let isExecuteButtonHidden: DynamicBinding<Bool> = DynamicBinding(false)
+    let isTextFieldEditable: DynamicBinding<Bool> = DynamicBinding(true)
     
     let result = [ValueEntity(5), ValueEntity(1), ValueEntity(11), ValueEntity(3), ValueEntity(-2)]
     
@@ -36,12 +37,14 @@ struct ViewModel {
     
     private func startExecutingTask() {
         
+        isTextFieldEditable.value = false
         executeActivityIndicatorAnimating.value = true
         isExecuteButtonHidden.value = true
     }
     
     private func finishExecutingTask() {
         
+        isTextFieldEditable.value = true
         executeActivityIndicatorAnimating.value = false
         isExecuteButtonHidden.value = false
     }
