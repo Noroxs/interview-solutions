@@ -14,17 +14,17 @@ struct Constants {
     
     static let valueAmountTableViewCellIdentifier = "ValueAmountTableViewCellIdentifier"
  
-    static let minimumRange = -3
-    static let maximumRange = 2
+    static let minimumRangeDivisor = -3
+    static let maximumRangeDivisor = 2
     
     static func calculateMinimumRange(for amount: Int) -> Int {
         
-        return amount * minimumRange
+        return amount / minimumRangeDivisor
     }
     
     static func calculateMaximumRange(for amount: Int) -> Int {
         
-        return amount * maximumRange
+        return amount / maximumRangeDivisor
     }
     
 }
