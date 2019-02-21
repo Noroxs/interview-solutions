@@ -16,6 +16,8 @@
 		BB85A9E0221DC65100EB30DE /* eNoteInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9DF221DC65100EB30DE /* eNoteInterviewTests.swift */; };
 		BB85A9EB221DC65100EB30DE /* eNoteInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */; };
 		BB85A9F9221DCA6100EB30DE /* DynamicBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */; };
+		BB9F2C93221F2DAF0005F40E /* TextToNumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C92221F2DAF0005F40E /* TextToNumberConverter.swift */; };
+		BB9F2C96221F2DFB0005F40E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C95221F2DFB0005F40E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eNoteInterviewUITests.swift; sourceTree = "<group>"; };
 		BB85A9EC221DC65100EB30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBinding.swift; sourceTree = "<group>"; };
+		BB9F2C92221F2DAF0005F40E /* TextToNumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToNumberConverter.swift; sourceTree = "<group>"; };
+		BB9F2C95221F2DFB0005F40E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,14 @@
 				BB85A9EC221DC65100EB30DE /* Info.plist */,
 			);
 			path = eNoteInterviewUITests;
+			sourceTree = "<group>";
+		};
+		BB9F2C94221F2DE70005F40E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB9F2C95221F2DFB0005F40E /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +310,7 @@
 				BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */,
 				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
 				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,
+				BB9F2C96221F2DFB0005F40E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
