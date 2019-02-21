@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var executeActivityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var executeButton: UIButton!
     @IBOutlet weak var resultTableView: UITableView!
-    @IBOutlet weak var randomNumberArrayTextView: UITextView!
     
     private var viewModel: ViewModel?
     
@@ -48,6 +47,7 @@ class ViewController: UIViewController {
         viewModel?.isTextFieldEditable.bindAndFire  { [weak self] isEditable in
             self?.amountTextField.isEnabled = isEditable
         }
+     
     }
     
 }
