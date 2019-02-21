@@ -48,6 +48,10 @@ class ViewController: UIViewController {
             self?.amountTextField.isEnabled = isEditable
         }
      
+        viewModel?.result.bind { [weak self] _ in
+            self?.resultTableView.reloadData()
+        }
+        
     }
     
 }
@@ -93,7 +97,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel?.result.count ?? 0
+        return viewModel?.result.value.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,8 +107,8 @@ extension ViewController: UITableViewDataSource {
         guard let amountValueCell = cell as? AmountValueTableViewCell,
             let viewModel = viewModel else { return cell }
         
-        amountValueCell.valueLabel.text = viewModel.result[indexPath.row].valueString
-        amountValueCell.amountLabel.text = viewModel.result[indexPath.row].amountString
+        amountValueCell.valueLabel.text = viewModel.result.value[indexPath.row].valueString
+        amountValueCell.amountLabel.text = viewModel.result.value[indexPath.row].amountString
         
         return cell
     }

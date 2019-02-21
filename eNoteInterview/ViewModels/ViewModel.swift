@@ -15,7 +15,7 @@ struct ViewModel {
     let isExecuteButtonHidden: DynamicBinding<Bool> = DynamicBinding(false)
     let isTextFieldEditable: DynamicBinding<Bool> = DynamicBinding(true)
     
-    let result = [ValueEntity(5), ValueEntity(1), ValueEntity(11), ValueEntity(3), ValueEntity(-2)]
+    let result: DynamicBinding<[ValueEntity<Int>]> = DynamicBinding([])
     
     private let textConverter = TextToNumberConverter()
     
@@ -24,12 +24,27 @@ struct ViewModel {
         guard let text = amountOfRandomNumbersText,
             textConverter.textContainsValidNumber(text) else { return }
         
-        let amountOfRandomNumbers = textConverter.number(for: text)
-        
         startExecutingTask()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.finishExecutingTask()
+        let amountOfRandomNumbers = textConverter.number(for: text)
+        createRandomArray(amount: amountOfRandomNumbers)
+    }
+    
+    private func createRandomArray(amount: Int) {
+        
+        DispatchQueue.global(qos: .background).async {
+            
+            var array = [ValueEntity<Int>]()
+            
+            for index in 0 ..< amount {
+                array.append(ValueEntity(index))
+            }
+            
+            DispatchQueue.main.async {
+                self.result.value = array
+                self.finishExecutingTask()
+            }
+            
         }
     }
     
@@ -37,6 +52,7 @@ struct ViewModel {
     
     private func startExecutingTask() {
         
+        result.value = []
         isTextFieldEditable.value = false
         executeActivityIndicatorAnimating.value = true
         isExecuteButtonHidden.value = true
