@@ -18,6 +18,7 @@
 		BB85A9F9221DCA6100EB30DE /* DynamicBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */; };
 		BB9F2C93221F2DAF0005F40E /* TextToNumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C92221F2DAF0005F40E /* TextToNumberConverter.swift */; };
 		BB9F2C96221F2DFB0005F40E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C95221F2DFB0005F40E /* Constants.swift */; };
+		BB9F2C9C221F38650005F40E /* ValueEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C9B221F38650005F40E /* ValueEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BB85A9F8221DCA6100EB30DE /* DynamicBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBinding.swift; sourceTree = "<group>"; };
 		BB9F2C92221F2DAF0005F40E /* TextToNumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToNumberConverter.swift; sourceTree = "<group>"; };
 		BB9F2C95221F2DFB0005F40E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB9F2C9B221F38650005F40E /* ValueEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BB85A9CA221DC65000EB30DE /* AppDelegate.swift */,
+				BB9F2C9A221F38390005F40E /* Models */,
 				BB58883E221E0CEE009F29CF /* Views */,
 				BB58883F221E0D0D009F29CF /* Miscellaneous */,
 				BB588842221E0D4E009F29CF /* Supporting Files */,
@@ -183,6 +186,14 @@
 				BB9F2C95221F2DFB0005F40E /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		BB9F2C9A221F38390005F40E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB9F2C9B221F38650005F40E /* ValueEntity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
 				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,
 				BB9F2C96221F2DFB0005F40E /* Constants.swift in Sources */,
+				BB9F2C9C221F38650005F40E /* ValueEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
