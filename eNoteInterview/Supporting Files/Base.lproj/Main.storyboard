@@ -104,7 +104,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-Vp-dxQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-Vp-dxQ">
                                 <rect key="frame" x="30" y="265" width="774" height="879"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="aWT-Vi-E09" userLabel="Footer">
@@ -121,7 +121,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRV-7K-z5V" userLabel="Seperator Label">
-                                                    <rect key="frame" x="563" y="11.5" width="8" height="21"/>
+                                                    <rect key="frame" x="383" y="11.5" width="8" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="FmM-6g-2bu"/>
                                                     </constraints>
@@ -130,27 +130,27 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-0B-fdQ" userLabel="Value Label">
-                                                    <rect key="frame" x="15" y="11.5" width="528" height="20.5"/>
+                                                    <rect key="frame" x="15" y="11.5" width="348" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-g0-h7N" userLabel="Amount Label">
-                                                    <rect key="frame" x="591" y="11.5" width="543" height="21"/>
+                                                    <rect key="frame" x="411" y="11.5" width="348" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="2qy-Ll-iFV"/>
-                                                <constraint firstItem="TUx-0B-fdQ" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="KLP-jV-kfl"/>
-                                                <constraint firstItem="Frm-g0-h7N" firstAttribute="leading" secondItem="sRV-7K-z5V" secondAttribute="trailing" constant="20" id="NKp-Gf-6OV"/>
-                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="centerX" secondItem="dEp-NQ-By4" secondAttribute="centerX" id="RVe-QE-9l1"/>
-                                                <constraint firstItem="Frm-g0-h7N" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="Ube-nm-oR9"/>
-                                                <constraint firstItem="TUx-0B-fdQ" firstAttribute="leading" secondItem="dEp-NQ-By4" secondAttribute="leadingMargin" id="ZOv-Bq-JVR"/>
-                                                <constraint firstAttribute="trailing" secondItem="Frm-g0-h7N" secondAttribute="trailing" id="agS-w5-BkF"/>
-                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="leading" secondItem="TUx-0B-fdQ" secondAttribute="trailing" constant="20" id="uiE-px-J47"/>
+                                                <constraint firstItem="TUx-0B-fdQ" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="2g4-4x-arT"/>
+                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="left" secondItem="TUx-0B-fdQ" secondAttribute="right" constant="20" id="2lA-GN-lPn"/>
+                                                <constraint firstAttribute="rightMargin" secondItem="Frm-g0-h7N" secondAttribute="right" id="Rj6-8N-n7d"/>
+                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="U2b-Ui-aMB"/>
+                                                <constraint firstItem="Frm-g0-h7N" firstAttribute="centerY" secondItem="dEp-NQ-By4" secondAttribute="centerY" id="e82-Fh-GM9"/>
+                                                <constraint firstItem="TUx-0B-fdQ" firstAttribute="left" secondItem="dEp-NQ-By4" secondAttribute="leftMargin" id="iO5-ls-a2b"/>
+                                                <constraint firstItem="sRV-7K-z5V" firstAttribute="centerX" secondItem="dEp-NQ-By4" secondAttribute="centerX" id="s4k-Hg-yx2"/>
+                                                <constraint firstItem="Frm-g0-h7N" firstAttribute="left" secondItem="sRV-7K-z5V" secondAttribute="right" constant="20" id="yT0-SE-4UR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
