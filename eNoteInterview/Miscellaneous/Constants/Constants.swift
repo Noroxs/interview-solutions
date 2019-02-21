@@ -13,5 +13,18 @@ struct Constants {
     static let validNumberCharacters = "0123456789"
     
     static let valueAmountTableViewCellIdentifier = "ValueAmountTableViewCellIdentifier"
+ 
+    static let minimumRange = -3
+    static let maximumRange = 2
+    
+    static func calculateMinimumRange(for amount: Int) -> Int {
+        
+        return amount * minimumRange
+    }
+    
+    static func calculateMaximumRange(for amount: Int) -> Int {
+        
+        return amount * maximumRange
+    }
     
 }

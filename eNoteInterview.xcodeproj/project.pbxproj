@@ -20,6 +20,7 @@
 		BB9F2C96221F2DFB0005F40E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C95221F2DFB0005F40E /* Constants.swift */; };
 		BB9F2C99221F37F70005F40E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C98221F37F70005F40E /* ViewModel.swift */; };
 		BB9F2C9C221F38650005F40E /* ValueEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C9B221F38650005F40E /* ValueEntity.swift */; };
+		BB9F2C9F221F510E0005F40E /* Generators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F2C9E221F510E0005F40E /* Generators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BB9F2C95221F2DFB0005F40E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB9F2C98221F37F70005F40E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BB9F2C9B221F38650005F40E /* ValueEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEntity.swift; sourceTree = "<group>"; };
+		BB9F2C9E221F510E0005F40E /* Generators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		BB58883F221E0D0D009F29CF /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				BB9F2C9D221F50F40005F40E /* Logic */,
 				BB9F2C94221F2DE70005F40E /* Constants */,
 				BB9F2C91221F2D920005F40E /* Converter */,
 				BB588840221E0D1C009F29CF /* Bindings */,
@@ -205,6 +208,14 @@
 				BB9F2C9B221F38650005F40E /* ValueEntity.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BB9F2C9D221F50F40005F40E /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BB9F2C9E221F510E0005F40E /* Generators.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 			files = (
 				BB85A9F9221DCA6100EB30DE /* DynamicBinding.swift in Sources */,
 				BB9F2C93221F2DAF0005F40E /* TextToNumberConverter.swift in Sources */,
+				BB9F2C9F221F510E0005F40E /* Generators.swift in Sources */,
 				BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */,
 				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
 				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,

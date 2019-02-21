@@ -18,6 +18,12 @@ struct ViewModel {
     let result: DynamicBinding<[ValueEntity<Int>]> = DynamicBinding([])
     
     private let textConverter = TextToNumberConverter()
+    private let generator: NumberGenerating
+    
+    init(generator: NumberGenerating = RandomNumberGenerator()) {
+        
+        self.generator = generator
+    }
     
     func startCreatingAndSorting(amountOfRandomNumbersText: String?) {
         
@@ -34,11 +40,7 @@ struct ViewModel {
         
         DispatchQueue.global(qos: .background).async {
             
-            var array = [ValueEntity<Int>]()
-            
-            for index in 0 ..< amount {
-                array.append(ValueEntity(index))
-            }
+            let array = self.generator.generateNumbers(amount: amount).map { return ValueEntity($0) }
             
             DispatchQueue.main.async {
                 self.result.value = array
