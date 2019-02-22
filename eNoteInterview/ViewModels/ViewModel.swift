@@ -21,7 +21,7 @@ struct ViewModel {
     private let worker: Working
     
     init(textConverter: TextToNumberConverter = TextToNumberConverter(),
-         worker: Working = Worker()) {
+         worker: Working = IntervalWorker()) {
         
         self.textConverter = textConverter
         self.worker = worker
