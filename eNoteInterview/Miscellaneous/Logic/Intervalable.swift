@@ -10,9 +10,9 @@ import UIKit
 
 protocol Intervalable {
 
-    func `continue`() -> [Any]
+    func `continue`() -> [Int]
     
-    var finished: DynamicBinding<Bool> { get }
+    var finished: Bool { get }
     
 }
 
