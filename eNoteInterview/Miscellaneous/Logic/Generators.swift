@@ -74,3 +74,55 @@ struct RandomNumberGenerator: NumberGenerating {
     }
     
 }
+
+class IntervalRandomNumberGenerator: NumberGenerating, Intervalable {
+    
+    var rangeCalculator: NumberRangeCalculating
+    var finished: DynamicBinding<Bool> = DynamicBinding(false)
+    
+    private let intervalSize: Int
+    private var loopsToPerform: Int = 0
+    private var leftoverAmount: Int = 0
+    
+    init(rangeCalculator: NumberRangeCalculating = DivideNumberRangeCalculator(), intervalSize: Int = 50000) {
+        
+        self.rangeCalculator = rangeCalculator
+        self.intervalSize = intervalSize
+    }
+    
+    func generateNumbers(amount: Int) -> [Int] {
+        
+        finished.value = false
+        calculateNeededLoops(for: amount)
+        
+        return generateNextNumbers()
+    }
+    
+    private func calculateNeededLoops(for amount: Int) {
+        
+        let positivAmount = max(amount, 0)
+        
+        loopsToPerform = positivAmount / intervalSize // example: amount = 123, interval = 50 -> amount / interval = 2 (because of int value no 0.xx values)
+        leftoverAmount = positivAmount % intervalSize // example: amount = 123, interval = 50 -> amount % interval = 23
+    }
+    
+    private func generateNextNumbers() -> [Int] {
+        
+        if loopsToPerform > 0 {
+            loopsToPerform -= 1
+            return generateRandomNumbers(amount: intervalSize)
+        } else if leftoverAmount > 0 {
+            finished.value = true
+            return generateRandomNumbers(amount: leftoverAmount)
+        } else {
+            finished.value = true
+            return []
+        }
+    }
+    
+    func `continue`() -> [Any] {
+        
+        return generateNextNumbers()
+    }
+    
+}
