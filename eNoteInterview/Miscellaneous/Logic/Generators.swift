@@ -58,7 +58,7 @@ struct StaticNumberGenerator: NumberGenerating {
     
 }
 
-class RandomNumberGenerator: NumberGenerating {
+struct RandomNumberGenerator: NumberGenerating {
     
     var rangeCalculator: NumberRangeCalculating
     
