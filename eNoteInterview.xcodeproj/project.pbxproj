@@ -10,6 +10,7 @@
 		BB30639422206E71001A0B59 /* Analyzers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639322206E71001A0B59 /* Analyzers.swift */; };
 		BB30639622206E87001A0B59 /* Sorters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639522206E87001A0B59 /* Sorters.swift */; };
 		BB30639822206E95001A0B59 /* Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639722206E95001A0B59 /* Mappers.swift */; };
+		BB30639A22208DDD001A0B59 /* Intervalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639922208DDD001A0B59 /* Intervalable.swift */; };
 		BB30639C22209484001A0B59 /* RangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639B22209484001A0B59 /* RangeCalculator.swift */; };
 		BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		BB30639322206E71001A0B59 /* Analyzers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzers.swift; sourceTree = "<group>"; };
 		BB30639522206E87001A0B59 /* Sorters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorters.swift; sourceTree = "<group>"; };
 		BB30639722206E95001A0B59 /* Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappers.swift; sourceTree = "<group>"; };
+		BB30639922208DDD001A0B59 /* Intervalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervalable.swift; sourceTree = "<group>"; };
 		BB30639B22209484001A0B59 /* RangeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCalculator.swift; sourceTree = "<group>"; };
 		BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValueTableViewCell.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 		BB9F2C9D221F50F40005F40E /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				BB30639922208DDD001A0B59 /* Intervalable.swift */,
 				BB9F2C9E221F510E0005F40E /* Generators.swift */,
 				BB30639322206E71001A0B59 /* Analyzers.swift */,
 				BB30639522206E87001A0B59 /* Sorters.swift */,
@@ -357,6 +360,7 @@
 				BB9F2C9F221F510E0005F40E /* Generators.swift in Sources */,
 				BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */,
 				BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */,
+				BB30639A22208DDD001A0B59 /* Intervalable.swift in Sources */,
 				BB30639822206E95001A0B59 /* Mappers.swift in Sources */,
 				BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */,
 				BB9F2C9C221F38650005F40E /* ValueEntity.swift in Sources */,
