@@ -95,6 +95,8 @@ extension ViewController: UITextFieldDelegate {
 
 extension ViewController: UITableViewDataSource {
     
+    private static let valueAmountTableViewCellIdentifier = "ValueAmountTableViewCellIdentifier"
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return viewModel?.numberOfRows() ?? 0
@@ -102,7 +104,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.valueAmountTableViewCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ViewController.valueAmountTableViewCellIdentifier, for: indexPath)
         
         guard let amountValueCell = cell as? AmountValueTableViewCell,
             let viewModel = viewModel else { return cell }

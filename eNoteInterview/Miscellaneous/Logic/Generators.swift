@@ -64,4 +64,20 @@ class RandomNumberGenerator: NumberGenerating {
         range = Array(minRange...maxRange)
     }
     
+    private struct Constants {
+        
+        static let minimumRangeDivisor = -3
+        static let maximumRangeDivisor = 2
+        
+        static func calculateMinimumRange(for amount: Int) -> Int {
+            
+            return amount / minimumRangeDivisor
+        }
+        
+        static func calculateMaximumRange(for amount: Int) -> Int {
+            
+            return amount / maximumRangeDivisor
+        }
+    }
+    
 }

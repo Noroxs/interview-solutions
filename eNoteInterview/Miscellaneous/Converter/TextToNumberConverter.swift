@@ -10,7 +10,7 @@ import UIKit
 
 struct TextToNumberConverter {
     
-    let validCharacters = Constants.validNumberCharacters
+    private let validCharacters = "0123456789"
     
     func textOnlyContainValidCharacters(_ text: String) -> Bool {
         
