@@ -21,6 +21,12 @@ struct ValueEntity<T> {
     
 }
 
+extension ValueEntity: CustomStringConvertible {
+    
+    var description: String { return "\(value) - \(amount)" }
+    
+}
+
 extension ValueEntity where T == Int {
     
     var valueString: String { return String(value) }
