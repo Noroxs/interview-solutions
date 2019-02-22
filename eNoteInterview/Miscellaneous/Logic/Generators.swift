@@ -25,10 +25,10 @@ private extension Generating {
         return range.randomElement() ?? 0
     }
     
-    func generateRandomNumbers(amount: Int) -> [Int] {
+    func generateRandomNumbers(amount: Int, range: [Int]? = nil) -> [Int] {
         
         let positivAmount = max(amount, 0)
-        let range = rangeCalculator.calculateRange(for: positivAmount)
+        let range = range ?? rangeCalculator.calculateRange(for: positivAmount)
         
         var randomNumbers = [Int]()
         for _ in 0 ..< positivAmount {
@@ -75,24 +75,28 @@ struct RandomGenerator: Generating {
     
 }
 
-class IntervalRandomNumberGenerator: NumberGenerating, Intervalable {
+typealias IntervalGenerating = Generating & Intervalable
+class IntervalRandomGenerator: IntervalGenerating {
     
-    var rangeCalculator: NumberRangeCalculating
-    var finished: DynamicBinding<Bool> = DynamicBinding(false)
+    var rangeCalculator: RangeCalculating
+    var finished: Bool = false
     
     private let intervalSize: Int
     private var loopsToPerform: Int = 0
     private var leftoverAmount: Int = 0
+    private var range: [Int] = []
     
-    init(rangeCalculator: NumberRangeCalculating = DivideNumberRangeCalculator(), intervalSize: Int = 50000) {
+    init(rangeCalculator: RangeCalculating = DivideRangeCalculator(), intervalSize: Int = 50000) {
         
         self.rangeCalculator = rangeCalculator
         self.intervalSize = intervalSize
+        
     }
     
     func generateNumbers(amount: Int) -> [Int] {
         
-        finished.value = false
+        finished = false
+        range = rangeCalculator.calculateRange(for: amount)
         calculateNeededLoops(for: amount)
         
         return generateNextNumbers()
@@ -110,17 +114,17 @@ class IntervalRandomNumberGenerator: NumberGenerating, Intervalable {
         
         if loopsToPerform > 0 {
             loopsToPerform -= 1
-            return generateRandomNumbers(amount: intervalSize)
+            return generateRandomNumbers(amount: intervalSize, range: range)
         } else if leftoverAmount > 0 {
-            finished.value = true
-            return generateRandomNumbers(amount: leftoverAmount)
+            finished = true
+            return generateRandomNumbers(amount: leftoverAmount, range: range)
         } else {
-            finished.value = true
+            finished = true
             return []
         }
     }
     
-    func `continue`() -> [Any] {
+    func `continue`() -> [Int] {
         
         return generateNextNumbers()
     }
