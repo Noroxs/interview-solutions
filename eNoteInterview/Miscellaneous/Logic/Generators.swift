@@ -10,21 +10,39 @@ import UIKit
 
 protocol NumberGenerating {
     
-    var range: [Int] { get }
+    var rangeCalculator: NumberRangeCalculating { get }
     
     func generateNumbers(amount: Int) -> [Int]
     
 }
 
-extension NumberGenerating {
+// MARK: - Random Number Generating methods
+
+private extension NumberGenerating {
     
-    var randomElement: Int { return range.randomElement() ?? 0 }
+    func randomNumber(from range: [Int]) -> Int {
+        
+        return range.randomElement() ?? 0
+    }
+    
+    func generateRandomNumbers(amount: Int) -> [Int] {
+        
+        let range = rangeCalculator.calculateNumberRange(for: amount)
+        
+        var randomNumbers = [Int]()
+        for _ in 0 ..< amount {
+            let randomElement = randomNumber(from: range)
+            randomNumbers.append(randomElement)
+        }
+        
+        return randomNumbers
+    }
     
 }
 
 struct StaticNumberGenerator: NumberGenerating {
     
-    var range: [Int] = []
+    var rangeCalculator: NumberRangeCalculating = StaticNumberRangeCalculator()
     
     let staticNumberList: [Int]
     
@@ -42,42 +60,16 @@ struct StaticNumberGenerator: NumberGenerating {
 
 class RandomNumberGenerator: NumberGenerating {
     
-    var range: [Int] = []
+    var rangeCalculator: NumberRangeCalculating
+    
+    init(rangeCalculator: NumberRangeCalculating = DivideNumberRangeCalculator()) {
+        
+        self.rangeCalculator = rangeCalculator
+    }
     
     func generateNumbers(amount: Int) -> [Int] {
         
-        generateRange(for: amount)
-        
-        var randomNumbers = [Int]()
-        for _ in 0 ..< amount {
-            randomNumbers.append(randomElement)
-        }
-        
-        return randomNumbers
-    }
-    
-    private func generateRange(for amount: Int) {
-        
-        let minRange = Constants.calculateMinimumRange(for: amount)
-        let maxRange = Constants.calculateMaximumRange(for: amount)
-        
-        range = Array(minRange...maxRange)
-    }
-    
-    private struct Constants {
-        
-        static let minimumRangeDivisor = -3
-        static let maximumRangeDivisor = 2
-        
-        static func calculateMinimumRange(for amount: Int) -> Int {
-            
-            return amount / minimumRangeDivisor
-        }
-        
-        static func calculateMaximumRange(for amount: Int) -> Int {
-            
-            return amount / maximumRangeDivisor
-        }
+        return generateRandomNumbers(amount: amount)
     }
     
 }
