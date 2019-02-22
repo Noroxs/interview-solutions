@@ -27,10 +27,11 @@ private extension NumberGenerating {
     
     func generateRandomNumbers(amount: Int) -> [Int] {
         
-        let range = rangeCalculator.calculateNumberRange(for: amount)
+        let positivAmount = max(amount, 0)
+        let range = rangeCalculator.calculateNumberRange(for: positivAmount)
         
         var randomNumbers = [Int]()
-        for _ in 0 ..< amount {
+        for _ in 0 ..< positivAmount {
             let randomElement = randomNumber(from: range)
             randomNumbers.append(randomElement)
         }
