@@ -30,7 +30,8 @@ struct TextToNumberConverter {
     
     func number(for text: String) -> Int {
         
-        return Int(text) ?? 0
+        let number = Int(text) ?? 0
+        return max(number, 0) // ensure number is positiv
     }
     
 }
