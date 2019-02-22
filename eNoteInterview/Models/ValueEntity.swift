@@ -13,9 +13,10 @@ struct ValueEntity<T> {
     var value: T
     var amount: Int = 0
     
-    init(_ value: T) {
+    init(_ value: T, amount: Int = 0) {
         
         self.value = value
+        self.amount = amount
     }
     
 }
