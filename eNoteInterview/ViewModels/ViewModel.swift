@@ -17,21 +17,14 @@ struct ViewModel {
     
     let result: DynamicBinding<[ValueEntity<Int>]> = DynamicBinding([])
     
-    private let textConverter = TextToNumberConverter()
-    private let generator: NumberGenerating
-    private let analyzer: NumberAnalyzing
-    private let sorter: NumberSorting
-    private let mapper: NumberMapping
+    private let textConverter: TextToNumberConverter
+    private let worker: NumberWorking
     
-    init(generator: NumberGenerating = RandomNumberGenerator(),
-        analyzer: NumberAnalyzing = NumberAnalyzer(),
-        sorter: NumberSorting = NumberSorter(),
-        mapper: NumberMapping = NumberMapper()) {
+    init(textConverter: TextToNumberConverter = TextToNumberConverter(),
+         worker: NumberWorking = NumberWorker()) {
         
-        self.generator = generator
-        self.analyzer = analyzer
-        self.sorter = sorter
-        self.mapper = mapper
+        self.textConverter = textConverter
+        self.worker = worker
     }
     
     func startCreatingAndSorting(amountOfRandomNumbersText: String?) {
@@ -47,19 +40,14 @@ struct ViewModel {
     
     private func createRandomArray(amount: Int) {
         
-        DispatchQueue.global(qos: .background).async {
-            
-            let generatedNumbers = self.generator.generateNumbers(amount: amount)
-            let analyzedNumbers = self.analyzer.analyze(numbers: generatedNumbers)
-            let sortedNumbers = self.sorter.sortNumbers(dictionary: analyzedNumbers)
-            let mappedNumbers = self.mapper.mapToValueEntities(sortedNumbers: sortedNumbers)
-            
-            DispatchQueue.main.async {
-                self.result.value = mappedNumbers
+        worker.result.bind { result in
+            self.result.value = result.values
+            if result.finished == true {
                 self.finishExecutingTask()
             }
-            
         }
+        
+        worker.startNumberCreationSortingAndMapping(for: amount)
     }
     
     // MARK: - Display tableview data source methods
