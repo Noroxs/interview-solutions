@@ -12,6 +12,7 @@
 		BB30639822206E95001A0B59 /* Mappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639722206E95001A0B59 /* Mappers.swift */; };
 		BB30639A22208DDD001A0B59 /* Intervalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639922208DDD001A0B59 /* Intervalable.swift */; };
 		BB30639C22209484001A0B59 /* RangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639B22209484001A0B59 /* RangeCalculator.swift */; };
+		BB30639E2220A542001A0B59 /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639D2220A542001A0B59 /* Workers.swift */; };
 		BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		BB30639722206E95001A0B59 /* Mappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappers.swift; sourceTree = "<group>"; };
 		BB30639922208DDD001A0B59 /* Intervalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervalable.swift; sourceTree = "<group>"; };
 		BB30639B22209484001A0B59 /* RangeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCalculator.swift; sourceTree = "<group>"; };
+		BB30639D2220A542001A0B59 /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
 		BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValueTableViewCell.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				BB30639522206E87001A0B59 /* Sorters.swift */,
 				BB30639722206E95001A0B59 /* Mappers.swift */,
 				BB30639B22209484001A0B59 /* RangeCalculator.swift */,
+				BB30639D2220A542001A0B59 /* Workers.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				BB30639622206E87001A0B59 /* Sorters.swift in Sources */,
 				BB85A9F9221DCA6100EB30DE /* DynamicBinding.swift in Sources */,
+				BB30639E2220A542001A0B59 /* Workers.swift in Sources */,
 				BB9F2C93221F2DAF0005F40E /* TextToNumberConverter.swift in Sources */,
 				BB30639C22209484001A0B59 /* RangeCalculator.swift in Sources */,
 				BB9F2C9F221F510E0005F40E /* Generators.swift in Sources */,
