@@ -12,9 +12,23 @@ protocol Analyzing {
 
     func analyze(numbers: [Int]) -> [Int: Int]
     
+    func clear()
+    
 }
 
-struct StaticAnalyzer: Analyzing  {
+extension Analyzing {
+    
+    func analyze(numbers: [Int]) -> [Int : Int] {
+        
+        return numbers.reduce(into: [Int: Int]()) { $0[$1, default: 0] += 1 }
+    }
+    
+    func clear() {
+        
+    }
+}
+
+struct StaticAnalyzer: Analyzing {
     
     let staticAnalyzedNumbers: [Int : Int]
     
@@ -30,11 +44,21 @@ struct StaticAnalyzer: Analyzing  {
 
 }
     
-struct Analyzer: Analyzing  {
+struct Analyzer: Analyzing { }
+
+class MemoryStorageAnalyzer: Analyzing {
+    
+    private var analyzedNumbers = [Int: Int]()
     
     func analyze(numbers: [Int]) -> [Int : Int] {
         
-        return numbers.reduce(into: [Int: Int]()) { $0[$1, default: 0] += 1 }
+        analyzedNumbers = numbers.reduce(into: analyzedNumbers) { $0[$1, default: 0] += 1 }
+        return analyzedNumbers
+    }
+    
+    func clear() {
+        
+        analyzedNumbers = [:]
     }
     
 }
