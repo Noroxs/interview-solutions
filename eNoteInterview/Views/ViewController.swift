@@ -97,7 +97,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel?.result.value.count ?? 0
+        return viewModel?.numberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,8 +107,8 @@ extension ViewController: UITableViewDataSource {
         guard let amountValueCell = cell as? AmountValueTableViewCell,
             let viewModel = viewModel else { return cell }
         
-        amountValueCell.valueLabel.text = viewModel.result.value[indexPath.row].valueString
-        amountValueCell.amountLabel.text = viewModel.result.value[indexPath.row].amountString
+        amountValueCell.valueLabel.text = viewModel.resultValueString(at: indexPath)
+        amountValueCell.amountLabel.text = viewModel.resultAmountString(at: indexPath)
         
         return cell
     }

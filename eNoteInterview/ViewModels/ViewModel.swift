@@ -50,6 +50,23 @@ struct ViewModel {
         }
     }
     
+    // MARK: - Display tableview data source methods
+    
+    func numberOfRows() -> Int {
+        
+        return result.value.count
+    }
+    
+    func resultAmountString(at indexPath: IndexPath) -> String {
+        
+        return result.value[indexPath.row].amountString
+    }
+    
+    func resultValueString(at indexPath: IndexPath) -> String {
+        
+        return result.value[indexPath.row].valueString
+    }
+    
     // MARK: - Execute Button/Activity Indicator toggeling
     
     private func startExecutingTask() {
