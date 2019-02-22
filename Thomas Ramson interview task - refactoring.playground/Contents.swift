@@ -6,7 +6,7 @@ let numberArray = [1, 3, 5, -2, 1, 5, 11]
 // out -> [1:2, 3:1, 5:2, -2:1, 11:1]
 func analyzeArray(_ array: [Int]) -> [Int: Int] {
 
-    return numberArray.reduce(into: [Int: Int]()) { $0[$1, default: 0] += 1 }
+    return array.reduce(into: [Int: Int]()) { $0[$1, default: 0] += 1 }
 }
 
 // in -> [1:2, 3:1, 5:2, -2:1, 11:1]
@@ -30,3 +30,7 @@ func printSortedNumbers(_ sortedNumbers: [(key: Int, value: Int)]) {
 let dictionary = analyzeArray(numberArray)
 let sortedNumbers = sortAnalyzedDictionary(dictionary)
 printSortedNumbers(sortedNumbers)
+
+
+
+
