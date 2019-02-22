@@ -19,10 +19,19 @@ struct ViewModel {
     
     private let textConverter = TextToNumberConverter()
     private let generator: NumberGenerating
+    private let analyzer: NumberAnalyzing
+    private let sorter: NumberSorting
+    private let mapper: NumberMapping
     
-    init(generator: NumberGenerating = RandomNumberGenerator()) {
+    init(generator: NumberGenerating = RandomNumberGenerator(),
+        analyzer: NumberAnalyzing = NumberAnalyzer(),
+        sorter: NumberSorting = NumberSorter(),
+        mapper: NumberMapping = NumberMapper()) {
         
         self.generator = generator
+        self.analyzer = analyzer
+        self.sorter = sorter
+        self.mapper = mapper
     }
     
     func startCreatingAndSorting(amountOfRandomNumbersText: String?) {
@@ -40,10 +49,13 @@ struct ViewModel {
         
         DispatchQueue.global(qos: .background).async {
             
-            let array = self.generator.generateNumbers(amount: amount).map { return ValueEntity($0) }
+            let generatedNumbers = self.generator.generateNumbers(amount: amount)
+            let analyzedNumbers = self.analyzer.analyze(numbers: generatedNumbers)
+            let sortedNumbers = self.sorter.sortNumbers(dictionary: analyzedNumbers)
+            let mappedNumbers = self.mapper.mapToValueEntities(sortedNumbers: sortedNumbers)
             
             DispatchQueue.main.async {
-                self.result.value = array
+                self.result.value = mappedNumbers
                 self.finishExecutingTask()
             }
             
