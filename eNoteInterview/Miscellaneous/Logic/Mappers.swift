@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol NumberMapping {
+protocol Mapping {
 
   func mapToValueEntities(sortedNumbers: [(key: Int, value: Int)]) -> [ValueEntity<Int>]
     
 }
 
-struct StaticNumberMapper: NumberMapping  {
+struct StaticMapper: Mapping  {
     
     let staticMappedNumbers: [ValueEntity<Int>]
     
@@ -30,7 +30,7 @@ struct StaticNumberMapper: NumberMapping  {
     
 }
 
-struct NumberMapper: NumberMapping {
+struct Mapper: Mapping {
 
     func mapToValueEntities(sortedNumbers: [(key: Int, value: Int)]) -> [ValueEntity<Int>] {
 

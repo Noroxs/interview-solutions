@@ -8,29 +8,29 @@
 
 import UIKit
 
-protocol NumberRangeCalculating {
+protocol RangeCalculating {
     
-    func calculateNumberRange(for amount: Int) -> [Int]
+    func calculateRange(for amount: Int) -> [Int]
     
 }
 
-struct StaticNumberRangeCalculator: NumberRangeCalculating  {
+struct StaticRangeCalculator: RangeCalculating  {
     
-    let staticNumbersRange: [Int]
+    let staticRange: [Int]
     
     init(staticNumbersRange: [Int] = []) {
         
-        self.staticNumbersRange = staticNumbersRange
+        self.staticRange = staticNumbersRange
     }
     
-    func calculateNumberRange(for amount: Int) -> [Int] {
+    func calculateRange(for amount: Int) -> [Int] {
         
-        return staticNumbersRange
+        return staticRange
     }
     
 }
 
-struct DivideNumberRangeCalculator: NumberRangeCalculating {
+struct DivideRangeCalculator: RangeCalculating {
     
     private let minimumRangeDivisor: Int
     private let maximumRangeDivisor: Int
@@ -41,7 +41,7 @@ struct DivideNumberRangeCalculator: NumberRangeCalculating {
         self.maximumRangeDivisor = maximumRangeDivisor
     }
     
-    func calculateNumberRange(for amount: Int) -> [Int] {
+    func calculateRange(for amount: Int) -> [Int] {
         
         let minRange = calculateMinimumRange(for: amount)
         let maxRange = calculateMaximumRange(for: amount)

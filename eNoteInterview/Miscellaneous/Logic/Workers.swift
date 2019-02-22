@@ -8,27 +8,27 @@
 
 import UIKit
 
-protocol NumberWorking {
+protocol Working {
     
-    func startNumberCreationSortingAndMapping(for amount: Int)
+    func startCreationSortingAndMapping(for amount: Int)
     
     var result: DynamicBinding<(values: [ValueEntity<Int>], finished: Bool)> { get }
     
 }
 
-struct NumberWorker: NumberWorking {
+struct Worker: Working {
     
-    private let generator: NumberGenerating
-    private let analyzer: NumberAnalyzing
-    private let sorter: NumberSorting
-    private let mapper: NumberMapping
+    private let generator: Generating
+    private let analyzer: Analyzing
+    private let sorter: Sorting
+    private let mapper: Mapping
     
     var result: DynamicBinding<(values: [ValueEntity<Int>], finished: Bool)> = DynamicBinding((values: [], finished: false))
     
-    init(generator: NumberGenerating = RandomNumberGenerator(),
-         analyzer: NumberAnalyzing = NumberAnalyzer(),
-         sorter: NumberSorting = NumberSorter(),
-         mapper: NumberMapping = NumberMapper()) {
+    init(generator: Generating = RandomGenerator(),
+         analyzer: Analyzing = Analyzer(),
+         sorter: Sorting = Sorter(),
+         mapper: Mapping = Mapper()) {
         
         self.generator = generator
         self.analyzer = analyzer
@@ -36,13 +36,13 @@ struct NumberWorker: NumberWorking {
         self.mapper = mapper
     }
     
-    func startNumberCreationSortingAndMapping(for amount: Int) {
+    func startCreationSortingAndMapping(for amount: Int) {
         
         DispatchQueue.global(qos: .background).async {
             
             let generatedNumbers = self.generator.generateNumbers(amount: amount)
             let analyzedNumbers = self.analyzer.analyze(numbers: generatedNumbers)
-            let sortedNumbers = self.sorter.sortNumbers(dictionary: analyzedNumbers)
+            let sortedNumbers = self.sorter.sort(dictionary: analyzedNumbers)
             let mappedNumbers = self.mapper.mapToValueEntities(sortedNumbers: sortedNumbers)
             
             DispatchQueue.main.async {
@@ -50,5 +50,11 @@ struct NumberWorker: NumberWorking {
             }
         }
     }
+    
+}
+
+struct IntervalWorker {
+    
+    private let intervalGenerator: IntervalGenerating
     
 }

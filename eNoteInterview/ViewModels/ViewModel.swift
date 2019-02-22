@@ -18,10 +18,10 @@ struct ViewModel {
     let result: DynamicBinding<[ValueEntity<Int>]> = DynamicBinding([])
     
     private let textConverter: TextToNumberConverter
-    private let worker: NumberWorking
+    private let worker: Working
     
     init(textConverter: TextToNumberConverter = TextToNumberConverter(),
-         worker: NumberWorking = NumberWorker()) {
+         worker: Working = Worker()) {
         
         self.textConverter = textConverter
         self.worker = worker
@@ -47,7 +47,7 @@ struct ViewModel {
             }
         }
         
-        worker.startNumberCreationSortingAndMapping(for: amount)
+        worker.startCreationSortingAndMapping(for: amount)
     }
     
     // MARK: - Display tableview data source methods

@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol NumberSorting {
+protocol Sorting {
     
-    func sortNumbers(dictionary: [Int: Int]) -> [(key: Int, value: Int)]
+    func sort(dictionary: [Int: Int]) -> [(key: Int, value: Int)]
     
 }
 
-struct StaticNumberSorter: NumberSorting  {
+struct StaticSorter: Sorting  {
     
     let staticSortedNumbers: [(key: Int, value: Int)]
     
@@ -23,16 +23,16 @@ struct StaticNumberSorter: NumberSorting  {
         self.staticSortedNumbers = staticSortedNumbers
     }
     
-    func sortNumbers(dictionary: [Int: Int]) -> [(key: Int, value: Int)] {
+    func sort(dictionary: [Int: Int]) -> [(key: Int, value: Int)] {
         
         return staticSortedNumbers
     }
     
 }
 
-struct NumberSorter: NumberSorting {
+struct Sorter: Sorting {
     
-    func sortNumbers(dictionary: [Int : Int]) -> [(key: Int, value: Int)] {
+    func sort(dictionary: [Int : Int]) -> [(key: Int, value: Int)] {
         
         return dictionary.sorted { lhs, rhs in
             if lhs.value != rhs.value {

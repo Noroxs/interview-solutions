@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol NumberAnalyzing {
+protocol Analyzing {
 
     func analyze(numbers: [Int]) -> [Int: Int]
     
 }
 
-struct StaticNumberAnalyzer: NumberAnalyzing  {
+struct StaticAnalyzer: Analyzing  {
     
     let staticAnalyzedNumbers: [Int : Int]
     
@@ -30,7 +30,7 @@ struct StaticNumberAnalyzer: NumberAnalyzing  {
 
 }
     
-struct NumberAnalyzer: NumberAnalyzing  {
+struct Analyzer: Analyzing  {
     
     func analyze(numbers: [Int]) -> [Int : Int] {
         

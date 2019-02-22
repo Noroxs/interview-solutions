@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol NumberGenerating {
+protocol Generating {
     
-    var rangeCalculator: NumberRangeCalculating { get }
+    var rangeCalculator: RangeCalculating { get }
     
     func generateNumbers(amount: Int) -> [Int]
     
@@ -18,7 +18,7 @@ protocol NumberGenerating {
 
 // MARK: - Random Number Generating methods
 
-private extension NumberGenerating {
+private extension Generating {
     
     func randomNumber(from range: [Int]) -> Int {
         
@@ -28,7 +28,7 @@ private extension NumberGenerating {
     func generateRandomNumbers(amount: Int) -> [Int] {
         
         let positivAmount = max(amount, 0)
-        let range = rangeCalculator.calculateNumberRange(for: positivAmount)
+        let range = rangeCalculator.calculateRange(for: positivAmount)
         
         var randomNumbers = [Int]()
         for _ in 0 ..< positivAmount {
@@ -41,29 +41,29 @@ private extension NumberGenerating {
     
 }
 
-struct StaticNumberGenerator: NumberGenerating {
+struct StaticGenerator: Generating {
     
-    var rangeCalculator: NumberRangeCalculating = StaticNumberRangeCalculator()
+    var rangeCalculator: RangeCalculating = StaticRangeCalculator()
     
-    let staticNumberList: [Int]
+    let staticList: [Int]
     
-    init(numberList: [Int]) {
+    init(list: [Int]) {
         
-        staticNumberList = numberList
+        staticList = list
     }
     
     func generateNumbers(amount: Int) -> [Int] {
         
-        return staticNumberList
+        return staticList
     }
     
 }
 
-struct RandomNumberGenerator: NumberGenerating {
+struct RandomGenerator: Generating {
     
-    var rangeCalculator: NumberRangeCalculating
+    var rangeCalculator: RangeCalculating
     
-    init(rangeCalculator: NumberRangeCalculating = DivideNumberRangeCalculator()) {
+    init(rangeCalculator: RangeCalculating = DivideRangeCalculator()) {
         
         self.rangeCalculator = rangeCalculator
     }
