@@ -13,6 +13,7 @@
 		BB30639A22208DDD001A0B59 /* Intervalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639922208DDD001A0B59 /* Intervalable.swift */; };
 		BB30639C22209484001A0B59 /* RangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639B22209484001A0B59 /* RangeCalculator.swift */; };
 		BB30639E2220A542001A0B59 /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639D2220A542001A0B59 /* Workers.swift */; };
+		BB3063A022213D53001A0B59 /* TextToNumberConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */; };
 		BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		BB30639922208DDD001A0B59 /* Intervalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervalable.swift; sourceTree = "<group>"; };
 		BB30639B22209484001A0B59 /* RangeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCalculator.swift; sourceTree = "<group>"; };
 		BB30639D2220A542001A0B59 /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
+		BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToNumberConverterTests.swift; sourceTree = "<group>"; };
 		BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValueTableViewCell.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BB85A9DF221DC65100EB30DE /* AlgorithmPerformanceMeasureTests.swift */,
+				BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */,
 				BB85A9E1221DC65100EB30DE /* Info.plist */,
 			);
 			path = eNoteInterviewTests;
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3063A022213D53001A0B59 /* TextToNumberConverterTests.swift in Sources */,
 				BB85A9E0221DC65100EB30DE /* AlgorithmPerformanceMeasureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
