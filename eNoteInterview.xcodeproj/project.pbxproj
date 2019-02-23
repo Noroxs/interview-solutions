@@ -19,6 +19,7 @@
 		BB6415732221518A00B7DA0B /* AnalyzerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415722221518A00B7DA0B /* AnalyzerTest.swift */; };
 		BB64157522215E3000B7DA0B /* SorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64157422215E3000B7DA0B /* SorterTests.swift */; };
 		BB6415772221638B00B7DA0B /* MapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415762221638B00B7DA0B /* MapperTest.swift */; };
+		BB641579222165A400B7DA0B /* RangeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB641578222165A400B7DA0B /* RangeCalculatorTests.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
 		BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9CE221DC65000EB30DE /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		BB6415722221518A00B7DA0B /* AnalyzerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzerTest.swift; sourceTree = "<group>"; };
 		BB64157422215E3000B7DA0B /* SorterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorterTests.swift; sourceTree = "<group>"; };
 		BB6415762221638B00B7DA0B /* MapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperTest.swift; sourceTree = "<group>"; };
+		BB641578222165A400B7DA0B /* RangeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeCalculatorTests.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB85A9CC221DC65000EB30DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				BB6415722221518A00B7DA0B /* AnalyzerTest.swift */,
 				BB64157422215E3000B7DA0B /* SorterTests.swift */,
 				BB6415762221638B00B7DA0B /* MapperTest.swift */,
+				BB641578222165A400B7DA0B /* RangeCalculatorTests.swift */,
 				BB85A9E1221DC65100EB30DE /* Info.plist */,
 			);
 			path = eNoteInterviewTests;
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6415772221638B00B7DA0B /* MapperTest.swift in Sources */,
+				BB641579222165A400B7DA0B /* RangeCalculatorTests.swift in Sources */,
 				BB3063A022213D53001A0B59 /* TextToNumberConverterTests.swift in Sources */,
 				BB85A9E0221DC65100EB30DE /* AlgorithmPerformanceMeasureTests.swift in Sources */,
 				BB641571222143F900B7DA0B /* GeneratorTests.swift in Sources */,
