@@ -19,6 +19,7 @@ enum AccessibilityIdentifiers: CustomStringConvertible {
     case amountLabel(IndexPath)
     
     var description: String {
+        
         switch self {
         case .amountTextField:
             return "AmountTextField"

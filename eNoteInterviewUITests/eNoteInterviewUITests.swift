@@ -7,28 +7,53 @@
 //
 
 import XCTest
+@testable import eNoteInterview
 
 class eNoteInterviewUITests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        let uiApplication = XCUIApplication()
+        uiApplication.launchArguments = ["-UITestMode"]
+        uiApplication.launch()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testGivenSeveralTextsWhenEnteredIntoTextFieldThenTextFieldShouldOnlyConatinNumbersAndExecuteButtonShouldBeToggledCorrectly() {
+        
+        XCTAssertTrue(AccessibilityIdentifiers.amountTextField.isEnabled, "Text field should be enabled")
+        
+        XCTAssertFalse(AccessibilityIdentifiers.executeButton.isEnabled, "Execute button should be disabled")
+        
+        AccessibilityIdentifiers.amountTextField.element.enterText(text: "test!@=")
+        
+        XCTAssertTrue(AccessibilityIdentifiers.amountTextField.element.enteredValue()!.isEmpty, "Text should be empty because it only conatins invalid caharters")
+        
+        XCTAssertFalse(AccessibilityIdentifiers.executeButton.isEnabled, "Execute button should be disabled")
+        
+        AccessibilityIdentifiers.amountTextField.element.enterText(text: "-123")
+        
+        XCTAssertEqual(AccessibilityIdentifiers.amountTextField.element.enteredValue()!, "123", "Text should be 123 because - is illigal and filtered")
+        
+        XCTAssertTrue(AccessibilityIdentifiers.executeButton.isEnabled, "Execute button should be enabled when valid string is entered")
     }
+    
+    func testGivenValidNumberWhenEnteredAndExecuteButtonPressedThenTableViewShouldContainCorrectData() {
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        AccessibilityIdentifiers.amountTextField.element.enterText(text: "123")
+        
+        XCTAssertTrue(AccessibilityIdentifiers.executeButton.isEnabled, "Execute button should be enabled when valid string is entered")
+        AccessibilityIdentifiers.executeButton.tap()
+        
+        let cellsCount = AccessibilityIdentifiers.tableView.element.cells.count
+        XCTAssertEqual(cellsCount, 5, "TableView should contain 5 items")
+        
+        let firstCellValue = AccessibilityIdentifiers.valueLabel(IndexPath(row: 0, section: 0)).label
+        XCTAssertEqual(firstCellValue, "5", "First cell should contain value label 5")
+        
+        let firstCellAmount = AccessibilityIdentifiers.amountLabel(IndexPath(row: 0, section: 0)).label
+        XCTAssertEqual(firstCellAmount, "2", "First cell should contain amount label 2")
     }
 
 }

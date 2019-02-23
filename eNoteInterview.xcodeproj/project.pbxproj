@@ -24,6 +24,9 @@
 		BB64157D22217DD600B7DA0B /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64157C22217DD600B7DA0B /* ViewModelTest.swift */; };
 		BB64157F22218D5B00B7DA0B /* WorkerIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64157E22218D5B00B7DA0B /* WorkerIntegrationTests.swift */; };
 		BB6415812221B13A00B7DA0B /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415802221B13A00B7DA0B /* AccessibilityIdentifiers.swift */; };
+		BB6415842221B57B00B7DA0B /* AccessibilityIdentifiers+UITestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415832221B57B00B7DA0B /* AccessibilityIdentifiers+UITestable.swift */; };
+		BB6415892221B7FC00B7DA0B /* XCUIElement+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415882221B7FC00B7DA0B /* XCUIElement+Helpers.swift */; };
+		BB6DC9502221EFEF00C29D94 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6415802221B13A00B7DA0B /* AccessibilityIdentifiers.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
 		BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9CE221DC65000EB30DE /* Main.storyboard */; };
@@ -73,6 +76,8 @@
 		BB64157C22217DD600B7DA0B /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
 		BB64157E22218D5B00B7DA0B /* WorkerIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerIntegrationTests.swift; sourceTree = "<group>"; };
 		BB6415802221B13A00B7DA0B /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		BB6415832221B57B00B7DA0B /* AccessibilityIdentifiers+UITestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibilityIdentifiers+UITestable.swift"; sourceTree = "<group>"; };
+		BB6415882221B7FC00B7DA0B /* XCUIElement+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Helpers.swift"; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB85A9CC221DC65000EB30DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				BB85A9EA221DC65100EB30DE /* eNoteInterviewUITests.swift */,
+				BB6415832221B57B00B7DA0B /* AccessibilityIdentifiers+UITestable.swift */,
+				BB6415882221B7FC00B7DA0B /* XCUIElement+Helpers.swift */,
 				BB85A9EC221DC65100EB30DE /* Info.plist */,
 			);
 			path = eNoteInterviewUITests;
@@ -434,6 +441,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB85A9EB221DC65100EB30DE /* eNoteInterviewUITests.swift in Sources */,
+				BB6DC9502221EFEF00C29D94 /* AccessibilityIdentifiers.swift in Sources */,
+				BB6415892221B7FC00B7DA0B /* XCUIElement+Helpers.swift in Sources */,
+				BB6415842221B57B00B7DA0B /* AccessibilityIdentifiers+UITestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
