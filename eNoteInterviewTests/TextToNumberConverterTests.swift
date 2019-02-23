@@ -18,6 +18,11 @@ class TextToNumberConverterTests: XCTestCase {
         converter = TextToNumberConverter()
     }
     
+    override func tearDown() {
+        
+        converter = nil
+    }
+    
     func testGivenNumberStringWhenTextOnlyContainValidCharactersIsCalledThenItShouldReturnTrue() {
         
         let validString = "1234567890"
