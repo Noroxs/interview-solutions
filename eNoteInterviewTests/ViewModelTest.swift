@@ -211,14 +211,54 @@ class ViewModelTest: XCTestCase {
         waitForExpectations(timeout: 0.5, handler: nil)
     }
     
+    func testValidEnteredTextWhenAmountTextFieldShouldChangeIsCalledThenViewModelBuildStringToCheckValidCharactersCorrect() {
+        
+        let converter = MockTextConverter()
+        let viewModel = ViewModel(textConverter: converter, worker: MockWorker())
+        
+        let enteredString = "123"
+        let _ = viewModel.amountTextFieldShouldChangeCharactersIn(NSRange(location: 3, length: 1), replacementString: enteredString, currentText: "HalloWelt")
+        
+        
+        let textOnlyContainValidCharactersString = converter.textOnlyContainValidCharactersString
+        XCTAssertEqual(textOnlyContainValidCharactersString, enteredString, "Only replace string should be checked for invalid characters")
+    }
+    
+    func testValidEnteredTextWhenAmountTextFieldShouldChangeIsCalledThenViewModelBuildStringToCheckForValidNumberCorrect() {
+        
+        let converter = MockTextConverter()
+        let viewModel = ViewModel(textConverter: converter, worker: MockWorker())
+        
+        let _ = viewModel.amountTextFieldShouldChangeCharactersIn(NSRange(location: 1, length: 0), replacementString: "4", currentText: "123")
+        
+        let expectedString = "1423"
+        let textContainsValidNumberString = converter.textContainsValidNumberString
+        XCTAssertEqual(textContainsValidNumberString, expectedString, "String should be build correctly to check for valid numbers")
+    }
+    
+    func testEmptyTextWhenAmountTextFieldShouldChangeIsCalledThenViewModelBuildStringCorrect() {
+        
+        let converter = MockTextConverter()
+        let viewModel = ViewModel(textConverter: converter, worker: MockWorker())
+        
+        let _ = viewModel.amountTextFieldShouldChangeCharactersIn(NSRange(location: 0, length: 4), replacementString: "", currentText: "1234")
+        
+        let expectedString = ""
+        let textContainsValidNumberString = converter.textContainsValidNumberString
+        XCTAssertEqual(textContainsValidNumberString, expectedString, "String should be build correctly to check for valid numbers")
+    }
+    
     // MARK: - Mock classes
     
-    private struct MockTextConverter: TextConverting {
+    private class MockTextConverter: TextConverting {
         
         var validCharacters: String = ""
         
         let onlyContainValidCharacters: Bool
         let containsValidNumber: Bool
+        
+        var textOnlyContainValidCharactersString: String?
+        var textContainsValidNumberString: String?
         
         init(onlyContainValidCharacters: Bool = true, containsValidNumber: Bool = true) {
             
@@ -228,10 +268,14 @@ class ViewModelTest: XCTestCase {
         
         func textOnlyContainValidCharacters(_ text: String) -> Bool {
             
+            textOnlyContainValidCharactersString = text
+            
             return onlyContainValidCharacters
         }
         
         func textContainsValidNumber(_ text: String) -> Bool {
+            
+            textContainsValidNumberString = text
             
             return containsValidNumber
         }
