@@ -110,7 +110,6 @@
 		BB58883F221E0D0D009F29CF /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
-				BB9F2C9D221F50F40005F40E /* Logic */,
 				BB9F2C91221F2D920005F40E /* Converter */,
 				BB588840221E0D1C009F29CF /* Bindings */,
 			);
@@ -163,6 +162,7 @@
 				BB9F2C9A221F38390005F40E /* Models */,
 				BB58883E221E0CEE009F29CF /* Views */,
 				BB9F2C97221F37D60005F40E /* ViewModels */,
+				BB9F2C9D221F50F40005F40E /* Logic */,
 				BB58883F221E0D0D009F29CF /* Miscellaneous */,
 				BB588842221E0D4E009F29CF /* Supporting Files */,
 			);
