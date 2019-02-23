@@ -41,7 +41,7 @@ private extension Generating {
     
 }
 
-struct StaticGenerator: Generating {
+class StaticGenerator: Generating {
     
     var rangeCalculator: RangeCalculating = StaticRangeCalculator()
     
@@ -56,6 +56,20 @@ struct StaticGenerator: Generating {
         
         return staticList
     }
+    
+    // needed for extension Intervalable
+    private var isFinished = false
+}
+
+extension StaticGenerator: Intervalable {
+    
+    func `continue`() -> [Int] {
+        
+        isFinished = true
+        return staticList
+    }
+    
+    var finished: Bool { return isFinished }
     
 }
 
