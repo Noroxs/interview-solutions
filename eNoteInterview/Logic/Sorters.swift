@@ -14,6 +14,21 @@ protocol Sorting {
     
 }
 
+extension Sorting {
+    
+    func sort(dictionary: [Int : Int]) -> [(key: Int, value: Int)] {
+        
+        return dictionary.sorted { lhs, rhs in
+            if lhs.value != rhs.value {
+                return lhs.value > rhs.value
+            } else {
+                return lhs.key > rhs.key
+            }
+        }
+    }
+    
+}
+
 struct StaticSorter: Sorting  {
     
     let staticSortedNumbers: [(key: Int, value: Int)]
@@ -30,17 +45,4 @@ struct StaticSorter: Sorting  {
     
 }
 
-struct Sorter: Sorting {
-    
-    func sort(dictionary: [Int : Int]) -> [(key: Int, value: Int)] {
-        
-        return dictionary.sorted { lhs, rhs in
-            if lhs.value != rhs.value {
-                return lhs.value > rhs.value
-            } else {
-                return lhs.key > rhs.key
-            }
-        }
-    }
-    
-}
+struct Sorter: Sorting { }
