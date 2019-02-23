@@ -48,7 +48,7 @@ struct Analyzer: Analyzing { }
 
 class MemoryStorageAnalyzer: Analyzing {
     
-    private var analyzedNumbers = [Int: Int]()
+    var analyzedNumbers = [Int: Int]()
     
     func analyze(numbers: [Int]) -> [Int : Int] {
         
