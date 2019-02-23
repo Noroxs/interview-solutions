@@ -21,10 +21,18 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        viewModel = ViewModel()
-        
+        setupViewModel()
         setupAccessibilityIdentifiers()
         setupViewBindings()
+    }
+    
+    private func setupViewModel() {
+        
+        if CommandLine.arguments.contains("-UITestMode") {
+            viewModel = ViewModel(worker: IntervalWorker(intervalGenerator: StaticGenerator()))
+        } else {
+            viewModel = ViewModel()
+        }
     }
     
     private func setupAccessibilityIdentifiers() {
