@@ -36,6 +36,15 @@ extension ValueEntity: Equatable where T == Int {
     
 }
 
+extension ValueEntity: Hashable where T == Int {
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+        hasher.combine(amount)
+    }
+    
+}
+
 extension ValueEntity where T == Int {
     
     var valueString: String { return String(value) }
