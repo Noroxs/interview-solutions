@@ -88,6 +88,19 @@ class GeneratorTests: XCTestCase {
         XCTAssertTrue(intervalGenerator.finished, "Process should be finished after one continue call")
     }
     
+    func testGivenIntervalOfTwoWhenGeneratingFourNumbersThenItShouldTakeThreeIntervalsToFinishTheCreation() {
+        
+        let intervalGenerator = IntervalRandomGenerator(intervalSize: 2)
+        
+        let _ = intervalGenerator.generateNumbers(amount: 4)
+        
+        XCTAssertFalse(intervalGenerator.finished, "Process shouldn't be finished by now")
+        
+        let _ = intervalGenerator.continue()
+        
+        XCTAssertTrue(intervalGenerator.finished, "Process should be finished after one continue call")
+    }
+    
     func testGivenIntervalRandomGeneratorWhenCallingContinueBeforeGenerateNumbersThenRandomNumbersShouldBeEmpty() {
         
         let intervalGenerator = IntervalRandomGenerator()

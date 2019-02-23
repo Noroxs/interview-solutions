@@ -126,16 +126,25 @@ class IntervalRandomGenerator: IntervalGenerating {
     
     private func generateNextNumbers() -> [Int] {
         
+        var generatedNumbers: [Int] = []
+        
         if loopsToPerform > 0 {
+            
+            generatedNumbers = generateRandomNumbers(amount: intervalSize, range: range)
+            
             loopsToPerform -= 1
-            return generateRandomNumbers(amount: intervalSize, range: range)
         } else if leftoverAmount > 0 {
-            finished = true
-            return generateRandomNumbers(amount: leftoverAmount, range: range)
-        } else {
-            finished = true
-            return []
+            
+            generatedNumbers = generateRandomNumbers(amount: leftoverAmount, range: range)
+            
+            leftoverAmount = 0
         }
+        
+        if loopsToPerform == 0 && leftoverAmount == 0 {
+            finished = true
+        }
+
+        return generatedNumbers
     }
     
     func `continue`() -> [Int] {
