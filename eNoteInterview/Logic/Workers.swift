@@ -107,6 +107,8 @@ struct IntervalWorker: Working {
             
             if finished == false {
                 self.performNextIteration()
+            } else {
+                self.analyzer.clear()
             }
         }
     }
