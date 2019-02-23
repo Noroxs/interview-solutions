@@ -43,9 +43,13 @@ struct DivideRangeCalculator: RangeCalculating {
     
     func calculateRange(for amount: Int) -> [Int] {
         
+        guard minimumRangeDivisor != 0 && maximumRangeDivisor != 0 else { return [] }
+        
         let positivAmount = max(amount, 0)
         let minRange = calculateMinimumRange(for: positivAmount)
         let maxRange = calculateMaximumRange(for: positivAmount)
+        
+        guard minRange < maxRange else { return [] }
         
         return Array(minRange...maxRange)
     }
