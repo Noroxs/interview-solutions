@@ -94,7 +94,7 @@ struct IntervalWorker: Working {
         }
     }
     
-    func performNextIteration() {
+    private func performNextIteration() {
         
         DispatchQueue.global(qos: .background).async {
             let generatedNumbers = self.intervalGenerator.continue()
