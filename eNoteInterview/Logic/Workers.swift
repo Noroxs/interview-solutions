@@ -38,6 +38,11 @@ struct Worker: Working {
     
     func startCreationSortingAndMapping(for amount: Int) {
         
+        guard amount > 0 else {
+            self.result.value = ([], true)
+            return
+        }
+        
         DispatchQueue.global(qos: .background).async {
             
             let generatedNumbers = self.generator.generateNumbers(amount: amount)
@@ -76,6 +81,11 @@ struct IntervalWorker: Working {
     func startCreationSortingAndMapping(for amount: Int) {
         
         analyzer.clear()
+        
+        guard amount > 0 else {
+            self.result.value = ([], true)
+            return
+        }
         
         DispatchQueue.global(qos: .background).async {
             let generatedNumbers = self.intervalGenerator.generateNumbers(amount: amount)
