@@ -126,6 +126,8 @@ class IntervalRandomGenerator: IntervalGenerating {
     
     func `continue`() -> [Int] {
         
+        guard finished == false && (loopsToPerform > 0 || leftoverAmount > 0) else { return [] }
+        
         return generateNextNumbers()
     }
     

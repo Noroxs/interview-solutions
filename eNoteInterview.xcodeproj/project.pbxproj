@@ -15,6 +15,7 @@
 		BB30639E2220A542001A0B59 /* Workers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639D2220A542001A0B59 /* Workers.swift */; };
 		BB3063A022213D53001A0B59 /* TextToNumberConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */; };
 		BB58883D221E07F2009F29CF /* AmountValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */; };
+		BB641571222143F900B7DA0B /* GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB641570222143F900B7DA0B /* GeneratorTests.swift */; };
 		BB85A9CB221DC65000EB30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CA221DC65000EB30DE /* AppDelegate.swift */; };
 		BB85A9CD221DC65000EB30DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85A9CC221DC65000EB30DE /* ViewController.swift */; };
 		BB85A9D0221DC65000EB30DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85A9CE221DC65000EB30DE /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		BB30639D2220A542001A0B59 /* Workers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workers.swift; sourceTree = "<group>"; };
 		BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToNumberConverterTests.swift; sourceTree = "<group>"; };
 		BB58883C221E07F2009F29CF /* AmountValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountValueTableViewCell.swift; sourceTree = "<group>"; };
+		BB641570222143F900B7DA0B /* GeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorTests.swift; sourceTree = "<group>"; };
 		BB85A9C7221DC65000EB30DE /* eNoteInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eNoteInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85A9CA221DC65000EB30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB85A9CC221DC65000EB30DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				BB85A9DF221DC65100EB30DE /* AlgorithmPerformanceMeasureTests.swift */,
 				BB30639F22213D53001A0B59 /* TextToNumberConverterTests.swift */,
+				BB641570222143F900B7DA0B /* GeneratorTests.swift */,
 				BB85A9E1221DC65100EB30DE /* Info.plist */,
 			);
 			path = eNoteInterviewTests;
@@ -382,6 +385,7 @@
 			files = (
 				BB3063A022213D53001A0B59 /* TextToNumberConverterTests.swift in Sources */,
 				BB85A9E0221DC65100EB30DE /* AlgorithmPerformanceMeasureTests.swift in Sources */,
+				BB641571222143F900B7DA0B /* GeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
