@@ -33,9 +33,8 @@ class AlgorithmPerformanceMeasureTests: XCTestCase {
     // analyze number array convert it to dictionary sort dictionary and map it to ValueEntities
     func combinedDictionarySort() {
         
-        let analyzedNumbersDictionary = analyzeNumberOccurrence(in: numbers)
-        let sortedNumbers = sortAnalyzedNumberDictionary(analyzedNumbersDictionary)
-        let _ = mapSortedNumbersToValueEntities(sortedNumbers)
+        let worker = Worker(generator: StaticGenerator(list: numbers))
+        worker.startCreationSortingAndMapping(for: 1)
     }
     
     // in -> [1:2, 3:1, 5:2, -2:1, 11:1]
