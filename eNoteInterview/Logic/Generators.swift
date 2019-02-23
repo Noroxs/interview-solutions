@@ -47,7 +47,7 @@ struct StaticGenerator: Generating {
     
     let staticList: [Int]
     
-    init(list: [Int]) {
+    init(list: [Int] = [1, 3, 5, -2, 1, 5, 11]) {
         
         staticList = list
     }
