@@ -8,9 +8,19 @@
 
 import UIKit
 
-struct TextToNumberConverter {
+protocol TextConverting {
     
-    private let validCharacters = "0123456789"
+    var validCharacters: String { get }
+    
+    func textOnlyContainValidCharacters(_ text: String) -> Bool
+    func textContainsValidNumber(_ text: String) -> Bool
+    func number(for text: String) -> Int
+    
+}
+
+struct TextToNumberConverter: TextConverting {
+    
+    var validCharacters = "0123456789"
     
     func textOnlyContainValidCharacters(_ text: String) -> Bool {
         

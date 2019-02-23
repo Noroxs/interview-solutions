@@ -17,10 +17,10 @@ struct ViewModel {
     
     let result: DynamicBinding<[ValueEntity<Int>]> = DynamicBinding([])
     
-    private let textConverter: TextToNumberConverter
+    private let textConverter: TextConverting
     private let worker: Working
     
-    init(textConverter: TextToNumberConverter = TextToNumberConverter(),
+    init(textConverter: TextConverting = TextToNumberConverter(),
          worker: Working = IntervalWorker()) {
         
         self.textConverter = textConverter
