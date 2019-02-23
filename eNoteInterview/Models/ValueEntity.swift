@@ -27,6 +27,15 @@ extension ValueEntity: CustomStringConvertible {
     
 }
 
+extension ValueEntity: Equatable where T == Int {
+    
+    static func == (lhs: ValueEntity<T>, rhs: ValueEntity<T>) -> Bool {
+        
+        return lhs.value == rhs.value && lhs.amount == rhs.amount
+    }
+    
+}
+
 extension ValueEntity where T == Int {
     
     var valueString: String { return String(value) }
