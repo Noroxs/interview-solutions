@@ -13,4 +13,10 @@ class AmountValueTableViewCell: UITableViewCell {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
+    override func awakeFromNib() {
+        
+        valueLabel.accessibilityIdentifier = AccessibilityIdentifiers.valueLabel(IndexPath()).description
+        amountLabel.accessibilityIdentifier = AccessibilityIdentifiers.amountLabel(IndexPath()).description
+    }
+    
 }

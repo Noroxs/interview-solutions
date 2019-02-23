@@ -23,7 +23,16 @@ class ViewController: UIViewController {
         
         viewModel = ViewModel()
         
+        setupAccessibilityIdentifiers()
         setupViewBindings()
+    }
+    
+    private func setupAccessibilityIdentifiers() {
+        
+        amountTextField.accessibilityIdentifier = AccessibilityIdentifiers.amountTextField.description
+        executeButton.accessibilityIdentifier = AccessibilityIdentifiers.executeButton.description
+        executeActivityIndicatorView.accessibilityIdentifier = AccessibilityIdentifiers.activityIndicator.description
+        resultTableView.accessibilityIdentifier = AccessibilityIdentifiers.tableView.description
     }
     
     private func setupViewBindings() {
@@ -109,10 +118,12 @@ extension ViewController: UITableViewDataSource {
         guard let amountValueCell = cell as? AmountValueTableViewCell,
             let viewModel = viewModel else { return cell }
         
+        amountValueCell.accessibilityIdentifier = AccessibilityIdentifiers.tableViewCell(indexPath).description
+        
         amountValueCell.valueLabel.text = viewModel.resultValueString(at: indexPath)
         amountValueCell.amountLabel.text = viewModel.resultAmountString(at: indexPath)
         
         return cell
     }
-     
+    
 }
