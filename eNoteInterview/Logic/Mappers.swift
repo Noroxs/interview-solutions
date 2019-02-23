@@ -14,6 +14,15 @@ protocol Mapping {
     
 }
 
+extension Mapping {
+    
+    func mapToValueEntities(sortedNumbers: [(key: Int, value: Int)]) -> [ValueEntity<Int>] {
+        
+        return sortedNumbers.map { ValueEntity($0, amount: $1) }
+    }
+    
+}
+
 struct StaticMapper: Mapping  {
     
     let staticMappedNumbers: [ValueEntity<Int>]
@@ -30,12 +39,4 @@ struct StaticMapper: Mapping  {
     
 }
 
-struct Mapper: Mapping {
-
-    func mapToValueEntities(sortedNumbers: [(key: Int, value: Int)]) -> [ValueEntity<Int>] {
-
-        return sortedNumbers.map { ValueEntity($0, amount: $1) }
-    }
-
-}
-
+struct Mapper: Mapping { }
