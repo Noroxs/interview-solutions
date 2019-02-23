@@ -47,25 +47,42 @@ class StaticGenerator: Generating {
     
     let staticList: [Int]
     
-    init(list: [Int] = [1, 3, 5, -2, 1, 5, 11]) {
+    private let numberOfIntervales: Int
+    
+    init(list: [Int] = [1, 3, 5, -2, 1, 5, 11], numberOfIntervales: Int = 1) {
         
         staticList = list
+        self.numberOfIntervales = numberOfIntervales
     }
     
     func generateNumbers(amount: Int) -> [Int] {
+        
+        // Intervalable properties updated
+        currentInterval = 1
+        if currentInterval >= numberOfIntervales {
+            isFinished = true
+        } else {
+            isFinished = false
+        }
         
         return staticList
     }
     
     // needed for extension Intervalable
     private var isFinished = false
+    private var currentInterval: Int = 0
 }
 
 extension StaticGenerator: Intervalable {
     
     func `continue`() -> [Int] {
         
-        isFinished = true
+        currentInterval += 1
+        
+        if currentInterval >= numberOfIntervales {
+            isFinished = true
+        }
+        
         return staticList
     }
     

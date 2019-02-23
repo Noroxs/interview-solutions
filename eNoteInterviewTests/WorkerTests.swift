@@ -93,7 +93,7 @@ class WorkerTests: XCTestCase {
     
     func testGivenAmountOfTenWhenStartingProcessThenResultShouldBeUpdatedTwice() {
         
-        let staticIntervalGenerator = StaticGenerator()
+        let staticIntervalGenerator = StaticGenerator(numberOfIntervales: 2)
         let intervalWorker = IntervalWorker(intervalGenerator: staticIntervalGenerator, analyzer: staticAnalyzer, sorter: staticSorter, mapper: staticMapper)
         
         let firstResultExpectation = expectation(description: "Worker should update results")
@@ -126,11 +126,11 @@ class WorkerTests: XCTestCase {
         
         intervalWorker.startCreationSortingAndMapping(for: 10)
         
-        waitForExpectations(timeout: 0.5, handler: nil)
+        waitForExpectations(timeout: 1.0, handler: nil)
         
         XCTAssertEqual(numbersOfResultUpdates, 2, "Worker should update result twice")
         XCTAssertEqual(resultValues, WorkerTests.testResult, "values should be correct")
-        XCTAssertTrue(resultFinished!, "Process should be finished")
+        XCTAssertTrue(resultFinished ?? false, "Process should be finished")
     }
     
     func testGivenAmountOfZeroWhenStartingProcessThenResultShouldBeUpdatedTwice() {
